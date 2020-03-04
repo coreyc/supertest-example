@@ -72,6 +72,6 @@ describe('/cookie', () => {
       await request(app)
         .get('/cookie')
         .expect('set-cookie', 'cookie=example-cookie; Path=/')
-    });
+    })
   })
 })
