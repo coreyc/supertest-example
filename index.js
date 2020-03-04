@@ -14,8 +14,9 @@ router.post('/item', (req, res, next) => {
   else res.sendStatus(500) && next()
 })
 
-router.get('/user', (req, res, next) => {
-  
+router.post('/user', (req, res, next) => {
+  if (req.headers.authorization) res.sendStatus(200)
+  else res.sendStatus(401) && next()
 })
 
 export default router

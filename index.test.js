@@ -45,10 +45,10 @@ describe('API', () => {
   })
 
   describe('/user', () => {
-    describe('#get', () => {
+    describe('#post', () => {
       it('should work with an authenticated user', async () => {
         await request(app)
-          .get('/user')
+          .post('/api/user')
           .auth('username', 'password')
           .expect(200)
       })
